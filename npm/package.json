@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Military-grade breathing techniques in your terminal",
   "bin": {
-    "breathe": "./bin/breathe"
+    "breathe": "bin/breathe"
   },
   "scripts": {
     "postinstall": "node install.js"
