@@ -1,0 +1,42 @@
+{
+  "name": "breathe-cli",
+  "version": "0.1.0",
+  "description": "Military-grade breathing techniques in your terminal",
+  "bin": {
+    "breathe": "./bin/breathe"
+  },
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomicIntuition/breathe-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "breathing",
+    "meditation",
+    "wellness",
+    "terminal",
+    "box-breathing",
+    "relaxation"
+  ],
+  "author": "Atomic Intuition",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AtomicIntuition/breathe-cli/issues"
+  },
+  "homepage": "https://github.com/AtomicIntuition/breathe-cli#readme",
+  "engines": {
+    "node": ">=14"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
+}

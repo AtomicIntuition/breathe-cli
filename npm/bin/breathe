@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+const { spawn } = require('child_process');
+const path = require('path');
+const fs = require('fs');
+
+const isWindows = process.platform === 'win32';
+const binaryName = isWindows ? 'breathe.exe' : 'breathe';
+const binaryPath = path.join(__dirname, binaryName);
+
+if (!fs.existsSync(binaryPath)) {
+  console.error('breathe binary not found. Try reinstalling:');
+  console.error('  npm uninstall -g breathe-cli && npm install -g breathe-cli');
+  console.error('\nOr install from source:');
+  console.error('  cargo install breathe');
+  process.exit(1);
+}
+
+const child = spawn(binaryPath, process.argv.slice(2), {
+  stdio: 'inherit',
+  windowsHide: false,
+});
+
+child.on('close', (code) => {
+  process.exit(code);
+});
